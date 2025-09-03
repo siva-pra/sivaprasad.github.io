@@ -4,7 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siva Prasad - Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 3px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #2c5530;
+            border-bottom: 2px solid #2c5530;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #2c5530;
+            margin-bottom: 5px;
+        }
+        h4 {
+            color: #4a4a4a;
+            margin-bottom: 10px;
+        }
+        h5 {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        a {
+            color: #2c5530;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ccc;
+            text-align: center;
+        }
+        
+        /* Skills Table Styles */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .skills-table th {
+            background-color: #2c5530;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #ddd;
+        }
+        .skills-table td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .skills-table tr:nth-child(even) td {
+            background-color: #f1f1f1;
+        }
+        .skills-table tr:hover td {
+            background-color: #e8f4e8;
+        }
+        .category {
+            font-weight: bold;
+            color: #2c5530;
+            min-width: 200px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -74,23 +173,76 @@
 
         <section class="section">
             <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Versioning Tools:</strong> Git, SVN</li>
-                <li><strong>Orchestration Tools:</strong> Kubernetes, OpenShift</li>
-                <li><strong>Containerization Tool:</strong> Docker</li>
-                <li><strong>Cloud Tools:</strong> AWS (EC2, EBS, S3, IAM, VPC, CloudWatch, etc.)</li>
-                <li><strong>Code Analysis Tools:</strong> SonarQube</li>
-                <li><strong>Operating Systems:</strong> Windows, Linux</li>
-                <li><strong>Project Management Tool:</strong> Jira</li>
-                <li><strong>CI/CD Tools:</strong> Jenkins</li>
-                <li><strong>Centralized Servers:</strong> GitHub, Bitbucket</li>
-                <li><strong>Web & Application Servers:</strong> Apache Tomcat, WebLogic</li>
-                <li><strong>Configuration Management:</strong> Ansible</li>
-                <li><strong>Languages and Scripting:</strong> Python</li>
-                <li><strong>Monitoring Tools:</strong> Nagios</li>
-                <li><strong>Repository Management:</strong> Nexus, JFrog</li>
-                <li><strong>Build Tools:</strong> Ant, Maven</li>
-            </ul>
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Technologies & Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="category">Versioning Tools</td>
+                        <td>Git, SVN</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Orchestration Tools</td>
+                        <td>Kubernetes, OpenShift</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Containerization Tool</td>
+                        <td>Docker</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Cloud Tools</td>
+                        <td>AWS (EC2, EBS, S3, IAM, VPC, CloudWatch, Load Balancer, CloudFormation, Auto Scaling)</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Code Analysis Tools</td>
+                        <td>SonarQube</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Operating Systems</td>
+                        <td>Windows, Linux</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Project Management Tool</td>
+                        <td>Jira</td>
+                    </tr>
+                    <tr>
+                        <td class="category">CI/CD Tools</td>
+                        <td>Jenkins</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Centralized Servers</td>
+                        <td>GitHub, Bitbucket</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Web & Application Servers</td>
+                        <td>Apache Tomcat, WebLogic</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Configuration Management</td>
+                        <td>Ansible</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Languages and Scripting</td>
+                        <td>Python</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Monitoring Tools</td>
+                        <td>Nagios</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Repository Management</td>
+                        <td>Nexus, JFrog</td>
+                    </tr>
+                    <tr>
+                        <td class="category">Build Tools</td>
+                        <td>Ant, Maven</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <footer>
