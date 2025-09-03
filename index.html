@@ -3,252 +3,702 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siva Prasad - Resume</title>
+    <title>Siva Prasad - DevOps Engineer</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        header {
-            text-align: center;
-            border-bottom: 3px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-        h2 {
-            color: #2c5530;
-            border-bottom: 2px solid #2c5530;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #2c5530;
-            margin-bottom: 5px;
-        }
-        h4 {
-            color: #4a4a4a;
-            margin-bottom: 10px;
-        }
-        h5 {
-            color: #666;
-            margin-bottom: 10px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        a {
-            color: #2c5530;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #ccc;
-            text-align: center;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        /* Skills Table Styles */
-        .skills-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
-        .skills-table th {
-            background-color: #2c5530;
+        
+        .resume-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            min-height: 95vh;
+        }
+        
+        /* Left Sidebar */
+        .sidebar {
+            background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 12px;
-            text-align: left;
+            padding: 30px 25px;
+            position: relative;
+        }
+        
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, #3498db, #2980b9);
+        }
+        
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 48px;
             font-weight: bold;
-            border: 1px solid #ddd;
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
         }
-        .skills-table td {
-            padding: 10px 12px;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
+        
+        .name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
         }
-        .skills-table tr:nth-child(even) td {
-            background-color: #f1f1f1;
+        
+        .title {
+            font-size: 14px;
+            color: #bdc3c7;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        .skills-table tr:hover td {
-            background-color: #e8f4e8;
+        
+        .contact-section h3 {
+            color: #3498db;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
         }
-        .category {
-            font-weight: bold;
-            color: #2c5530;
-            min-width: 200px;
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 12px;
+            color: #3498db;
+        }
+        
+        .education-section {
+            margin-top: 30px;
+        }
+        
+        .education-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .education-school {
+            font-size: 12px;
+            color: #bdc3c7;
+            margin-bottom: 5px;
+        }
+        
+        .education-score {
+            font-size: 12px;
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 40px;
+            background: white;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 2px;
+        }
+        
+        /* Professional Summary */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 15px;
+        }
+        
+        .summary-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .job-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-size: 16px;
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        .duration {
+            font-size: 14px;
+            color: #7f8c8d;
+            background: #ecf0f1;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        .project {
+            background: #f8f9fa;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+        
+        .environment {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .environment-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .tech-tag {
+            background: #3498db;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        
+        .responsibilities {
+            margin-top: 15px;
+        }
+        
+        .responsibilities ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .responsibilities li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .responsibilities li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-size: 12px;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.15);
+        }
+        
+        .skill-category {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f8f9fa;
+            color: #2c3e50;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid #e9ecef;
+            transition: all 0.2s ease;
+        }
+        
+        .skill-tag:hover {
+            background: #3498db;
+            color: white;
+            transform: scale(1.05);
+            border-color: #3498db;
+        }
+        
+        .skill-icon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+        }
+        
+        .aws-tag {
+            background: #ff9900;
+            color: white;
+            border-color: #ff9900;
+        }
+        
+        .aws-tag:hover {
+            background: #e88800;
+        }
+        
+        .aws-services {
+            font-size: 10px;
+            color: #7f8c8d;
+            margin-top: 8px;
+            font-style: italic;
+            line-height: 1.3;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .resume-container {
+                grid-template-columns: 1fr;
+                margin: 10px;
+            }
+            
+            .sidebar {
+                order: 2;
+            }
+            
+            .main-content {
+                order: 1;
+                padding: 20px;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Siva Prasad</h1>
-            <p>Email: <a href="mailto:tellagorlasivaprasad1996@gmail.com">tellagorlasivaprasad1996@gmail.com</a> | Phone: +91-9492925563</p>
-        </header>
+    <div class="resume-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-image">SP</div>
+                <div class="name">SIVA PRASAD</div>
+                <div class="title">DevOps Engineer</div>
+            </div>
+            
+            <div class="contact-section">
+                <h3>Contact</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:tellagorlasivaprasad1996@gmail.com" style="color: #bdc3c7; text-decoration: none;">tellagorlasivaprasad1996@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span>+91-9492925563</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>Bangalore, India</span>
+                </div>
+            </div>
+            
+            <div class="education-section">
+                <h3>Education</h3>
+                <div class="education-item">
+                    <div class="education-degree">B.Tech in EEE</div>
+                    <div class="education-school">JNTUK, Kakinada</div>
+                    <div class="education-score">78% • 2019</div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <strong>4+ years</strong> of extensive experience in Software Development lifecycle as a DevOps Engineer, specializing in CI/CD, Configuration Management, and Cloud Services.
+                    </div>
+                    <div class="summary-item">
+                        <strong>DevOps Expertise:</strong> Hands-on experience with Maven, Git, Jenkins, Ansible, Docker, Kubernetes for automated build and deployment processes.
+                    </div>
+                    <div class="summary-item">
+                        <strong>Cloud Proficiency:</strong> Strong experience with AWS services including EC2, EBS, S3, IAM, VPC, CloudWatch, Load Balancer, CloudFormation, and Auto Scaling.
+                    </div>
+                    <div class="summary-item">
+                        <strong>Containerization:</strong> Proficient in Docker containerization and Kubernetes orchestration, managing images via DockerHub Registry.
+                    </div>
+                    <div class="summary-item">
+                        <strong>Quality & Monitoring:</strong> Experienced in code quality analysis using SonarQube, monitoring with Nagios and CloudWatch.
+                    </div>
+                    <div class="summary-item">
+                        <strong>Automation:</strong> Skilled in Python scripting for build automation and Linux command-line operations.
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">DevOps Engineer & Build Release Engineer</div>
+                            <div class="company">Infosys, Bangalore</div>
+                        </div>
+                        <div class="duration">May 2019 – Present</div>
+                    </div>
+                    
+                    <div class="project">
+                        <div class="project-title">🚗 Automobiles Project (Mercedes-Benz)</div>
+                        <div class="project-meta">
+                            <span><strong>Duration:</strong> May 2021 – Present</span>
+                            <span><strong>Team Size:</strong> 4 Members</span>
+                        </div>
+                        
+                        <div class="environment">
+                            <div class="environment-title">Technology Environment:</div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Maven</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">Jira</span>
+                                <span class="tech-tag">Jenkins</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Ansible</span>
+                                <span class="tech-tag">Kubernetes</span>
+                                <span class="tech-tag">Nexus</span>
+                                <span class="tech-tag">SonarQube</span>
+                            </div>
+                        </div>
+                        
+                        <div class="responsibilities">
+                            <h4 style="color: #2c3e50; margin-bottom: 10px;">Key Responsibilities:</h4>
+                            <ul>
+                                <li>Coordinated pre- and post-build activities, resolving build-related issues with development team</li>
+                                <li>Automated CI/CD pipelines using Jenkins, integrating with Git and Nexus repositories</li>
+                                <li>Deployed applications using Kubernetes and OpenShift, managing pods, services, and namespaces</li>
+                                <li>Created and managed Docker images, Dockerfiles, and Docker Hub registries</li>
+                                <li>Performed advanced Git operations (stash, squash, cherry-pick, bisect, revert, reset, rebase)</li>
+                                <li>Implemented Ansible for server configuration and automation, including roles and vault security</li>
+                                <li>Managed AWS EC2 instances, IAM, S3 policies, VPCs, and subnets</li>
+                                <li>Configured SonarQube with quality gates for static code analysis</li>
+                                <li>Maintained Kubernetes networking (Flannel, Weave Net, Calico) and ingress/load balancers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="project">
+                        <div class="project-title">🌐 Internet of Things (IoT) Project (Verizon)</div>
+                        <div class="project-meta">
+                            <span><strong>Duration:</strong> May 2019 – May 2021</span>
+                            <span><strong>Team Size:</strong> 3 Members</span>
+                        </div>
+                        
+                        <div class="environment">
+                            <div class="environment-title">Technology Environment:</div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Maven</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">Jira</span>
+                                <span class="tech-tag">Nexus</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Jenkins</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Ansible</span>
+                                <span class="tech-tag">Tomcat7</span>
+                                <span class="tech-tag">Core Java</span>
+                            </div>
+                        </div>
+                        
+                        <div class="responsibilities">
+                            <h4 style="color: #2c3e50; margin-bottom: 10px;">Key Responsibilities:</h4>
+                            <ul>
+                                <li>Managed daily build and deployment activities, ensuring smooth operations for end-users</li>
+                                <li>Configured Jenkins for CI/CD automation and integrated with Git repositories</li>
+                                <li>Deployed applications on Apache Tomcat and managed server configurations</li>
+                                <li>Launched AWS EC2 instances and S3 buckets using Python scripts (Boto, OS, Sys, Subprocess)</li>
+                                <li>Created and maintained documentation for resolved issues as knowledge base</li>
+                                <li>Performed post-deployment validation, including JUnit tests, and supported testing teams</li>
+                                <li>Implemented Ansible for server configuration and automation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3 class="skill-category">🔧 Version Control</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/git.svg" alt="Git" class="skill-icon">
+                                Git
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/subversion.svg" alt="SVN" class="skill-icon">
+                                SVN
+                            </span>
+                        </div>
+                    </div>
 
-        <section class="section">
-            <h2>Professional Summary</h2>
-            <ul>
-                <li>Around 4 years of extensive experience in Software Development lifecycle as a DevOps Engineer, specializing in Continuous Integration, Delivery, Configuration Management, Build and Release Management, Cloud Services, and Containerization.</li>
-                <li>Hands-on experience with DevOps tools: Maven, Git, Jenkins, Ansible, Docker, Kubernetes.</li>
-                <li>Expertise in setting up CI/CD pipelines using Jenkins for automated builds and deployments.</li>
-                <li>Proficient in creating and deploying applications using Docker containerization and Kubernetes orchestration.</li>
-                <li>Experienced in creating Dockerfile and Docker-Compose files, managing images via DockerHub Registry.</li>
-                <li>Skilled in build automation using Maven for Java projects and version control with Git, SVN, and Bitbucket.</li>
-                <li>Proficient in code quality analysis using SonarQube for security vulnerabilities and code coverage.</li>
-                <li>Strong experience with AWS services (EC2, EBS, S3, IAM, VPC, CloudWatch, Load Balancer, CloudFormation, Auto Scaling).</li>
-                <li>Expertise in configuration management using Ansible, including writing playbooks and managing inventory.</li>
-                <li>Experienced in deploying applications on Apache Tomcat and WebLogic servers.</li>
-                <li>Proficient in monitoring tools like Nagios and CloudWatch, and project management with Jira.</li>
-                <li>Skilled in Python scripting for build automation and Linux command-line operations.</li>
-            </ul>
-        </section>
+                    <div class="skill-card">
+                        <h3 class="skill-category">⚡ Orchestration</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/kubernetes.svg" alt="Kubernetes" class="skill-icon">
+                                Kubernetes
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/redhatopenshift.svg" alt="OpenShift" class="skill-icon">
+                                OpenShift
+                            </span>
+                        </div>
+                    </div>
 
-        <section class="section">
-            <h2>Professional Experience</h2>
-            <h3>DevOps Engineer and Build Release Engineer</h3>
-            <p><strong>Infosys, Bangalore</strong> | May 2019 – Present</p>
-            <h4>Project #1: Automobiles (Mercedes-Benz)</h4>
-            <p><strong>Duration:</strong> May 2021 – Present | <strong>Team Size:</strong> 4</p>
-            <p><strong>Environment:</strong> Maven, Git, Jira, Jenkins, AWS, Docker, Ansible, Kubernetes, Nexus, SonarQube</p>
-            <h5>Responsibilities:</h5>
-            <ul>
-                <li>Coordinated pre- and post-build activities, resolving build-related issues with the development team.</li>
-                <li>Automated CI/CD pipelines using Jenkins, integrating with Git and Nexus repositories.</li>
-                <li>Deployed applications using Kubernetes and OpenShift, managing pods, services, and namespaces.</li>
-                <li>Created and managed Docker images, Dockerfiles, and Docker Hub registries.</li>
-                <li>Performed Git operations (stash, squash, cherry-pick, bisect, revert, reset, rebase) and managed Bitbucket repositories.</li>
-                <li>Implemented Ansible for server configuration and automation, including roles and vault security.</li>
-                <li>Managed AWS EC2 instances, IAM, S3 policies, VPCs, and subnets.</li>
-                <li>Configured SonarQube with quality gates for static code analysis.</li>
-                <li>Maintained Kubernetes networking (Flannel, Weave Net, Calico) and ingress/load balancers.</li>
-            </ul>
+                    <div class="skill-card">
+                        <h3 class="skill-category">📦 Containerization</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/docker.svg" alt="Docker" class="skill-icon">
+                                Docker
+                            </span>
+                        </div>
+                    </div>
 
-            <h4>Project #2: Internet of Things (IoT) (Verizon)</h4>
-            <p><strong>Duration:</strong> May 2019 – May 2021 | <strong>Team Size:</strong> 3</p>
-            <p><strong>Environment:</strong> Maven, Git, Jira, Nexus, AWS, Jenkins, Docker, Ansible, Tomcat7, Core Java</p>
-            <h5>Responsibilities:</h5>
-            <ul>
-                <li>Managed daily build and deployment activities, ensuring smooth operations for end-users.</li>
-                <li>Configured Jenkins for CI/CD automation and integrated with Git repositories.</li>
-                <li>Deployed applications on Apache Tomcat and managed server configurations.</li>
-                <li>Launched AWS EC2 instances and S3 buckets using Python scripts (Boto, OS, Sys, Subprocess).</li>
-                <li>Created and maintained documentation for resolved issues as a knowledge base.</li>
-                <li>Performed post-deployment validation, including JUnit tests, and supported testing teams.</li>
-                <li>Implemented Ansible for server configuration and automation.</li>
-            </ul>
-        </section>
+                    <div class="skill-card">
+                        <h3 class="skill-category">☁️ Cloud Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag aws-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/amazonaws.svg" alt="AWS" class="skill-icon">
+                                AWS
+                            </span>
+                            <div class="aws-services">EC2 • EBS • S3 • IAM • VPC • CloudWatch • Load Balancer • CloudFormation • Auto Scaling</div>
+                        </div>
+                    </div>
 
-        <section class="section">
-            <h2>Academic Profile</h2>
-            <p><strong>B.Tech in Electrical and Electronic Engineering (EEE)</strong></p>
-            <p>JNTUK Jawaharlal Nehru Technological University, Kakinada, Andhra Pradesh | 78%</p>
-        </section>
+                    <div class="skill-card">
+                        <h3 class="skill-category">🔍 Code Quality</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/sonarqube.svg" alt="SonarQube" class="skill-icon">
+                                SonarQube
+                            </span>
+                        </div>
+                    </div>
 
-        <section class="section">
-            <h2>Technical Skills</h2>
-            <table class="skills-table">
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Technologies & Tools</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="category">Versioning Tools</td>
-                        <td>Git, SVN</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Orchestration Tools</td>
-                        <td>Kubernetes, OpenShift</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Containerization Tool</td>
-                        <td>Docker</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Cloud Tools</td>
-                        <td>AWS (EC2, EBS, S3, IAM, VPC, CloudWatch, Load Balancer, CloudFormation, Auto Scaling)</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Code Analysis Tools</td>
-                        <td>SonarQube</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Operating Systems</td>
-                        <td>Windows, Linux</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Project Management Tool</td>
-                        <td>Jira</td>
-                    </tr>
-                    <tr>
-                        <td class="category">CI/CD Tools</td>
-                        <td>Jenkins</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Centralized Servers</td>
-                        <td>GitHub, Bitbucket</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Web & Application Servers</td>
-                        <td>Apache Tomcat, WebLogic</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Configuration Management</td>
-                        <td>Ansible</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Languages and Scripting</td>
-                        <td>Python</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Monitoring Tools</td>
-                        <td>Nagios</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Repository Management</td>
-                        <td>Nexus, JFrog</td>
-                    </tr>
-                    <tr>
-                        <td class="category">Build Tools</td>
-                        <td>Ant, Maven</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                    <div class="skill-card">
+                        <h3 class="skill-category">🚀 CI/CD</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/jenkins.svg" alt="Jenkins" class="skill-icon">
+                                Jenkins
+                            </span>
+                        </div>
+                    </div>
 
-        <footer>
-            <p><strong>Declaration:</strong> I hereby declare that the above particulars are true to the best of my knowledge and belief.</p>
-            <p><strong>Place:</strong> Bangalore | <strong>Siva Prasad</strong></p>
-        </footer>
+                    <div class="skill-card">
+                        <h3 class="skill-category">⚙️ Configuration</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/ansible.svg" alt="Ansible" class="skill-icon">
+                                Ansible
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-category">🐍 Programming</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/python.svg" alt="Python" class="skill-icon">
+                                Python
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-category">🔨 Build Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/apacheant.svg" alt="Ant" class="skill-icon">
+                                Ant
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/apachemaven.svg" alt="Maven" class="skill-icon">
+                                Maven
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-category">📊 Monitoring</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/nagios.svg" alt="Nagios" class="skill-icon">
+                                Nagios
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
