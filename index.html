@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siva Prasad - DevOps Engineer</title>
+    <title>Tellagorla Siva Prasad - DevOps Engineer</title>
     <style>
         * {
             margin: 0;
@@ -17,7 +17,7 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
         }
         
         .resume-container {
@@ -36,8 +36,9 @@
         .sidebar {
             background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 30px 25px;
+            padding: 20px 15px;
             position: relative;
+            min-width: 250px; /* Ensures sidebar stays visible on mobile */
         }
         
         .sidebar::before {
@@ -52,7 +53,7 @@
         
         .profile-section {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         
         .profile-image {
@@ -63,21 +64,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 48px;
-            font-weight: bold;
+            margin: 0 auto 15px;
             box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
         }
         
+        .profile-image img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
         .name {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             letter-spacing: 1px;
         }
         
         .title {
-            font-size: 14px;
+            font-size: 12px;
             color: #bdc3c7;
             font-weight: 300;
             text-transform: uppercase;
@@ -86,74 +91,97 @@
         
         .contact-section h3 {
             color: #3498db;
-            font-size: 16px;
-            margin-bottom: 15px;
+            font-size: 14px;
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-bottom: 2px solid #3498db;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
         
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
-            font-size: 13px;
+            margin-bottom: 10px;
+            font-size: 12px;
         }
         
         .contact-icon {
-            width: 16px;
-            height: 16px;
-            margin-right: 12px;
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
             color: #3498db;
         }
         
+        .achievements-section {
+            margin-top: 25px;
+        }
+        
+        .achievements-section h3 {
+            color: #3498db;
+            font-size: 14px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 6px;
+        }
+        
+        .achievement-item {
+            background: rgba(255,255,255,0.1);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            border-left: 4px solid #3498db;
+            font-size: 12px;
+        }
+        
         .education-section {
-            margin-top: 30px;
+            margin-top: 25px;
         }
         
         .education-item {
             background: rgba(255,255,255,0.1);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
             border-left: 4px solid #3498db;
         }
         
         .education-degree {
             font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 5px;
+            font-size: 13px;
+            margin-bottom: 4px;
         }
         
         .education-school {
-            font-size: 12px;
+            font-size: 11px;
             color: #bdc3c7;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
         
         .education-score {
-            font-size: 12px;
+            font-size: 11px;
             color: #3498db;
             font-weight: 600;
         }
         
         /* Main Content */
         .main-content {
-            padding: 40px;
+            padding: 30px;
             background: white;
         }
         
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         
         .section-title {
-            font-size: 28px;
+            font-size: 24px;
             color: #2c3e50;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
         
         .section-title::after {
@@ -161,8 +189,8 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 60px;
-            height: 3px;
+            width: 50px;
+            height: 2px;
             background: linear-gradient(90deg, #3498db, #2980b9);
             border-radius: 2px;
         }
@@ -170,16 +198,16 @@
         /* Professional Summary */
         .summary-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 12px;
         }
         
         .summary-item {
             background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
+            padding: 12px;
+            border-radius: 8px;
             border-left: 4px solid #3498db;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.5;
         }
         
@@ -187,10 +215,10 @@
         .experience-item {
             background: white;
             border: 1px solid #e9ecef;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.08);
             position: relative;
         }
         
@@ -200,92 +228,92 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, #3498db, #2980b9);
-            border-radius: 15px 15px 0 0;
+            border-radius: 12px 12px 0 0;
         }
         
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .job-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
         
         .company {
-            font-size: 16px;
+            font-size: 14px;
             color: #3498db;
             font-weight: 600;
         }
         
         .duration {
-            font-size: 14px;
+            font-size: 12px;
             color: #7f8c8d;
             background: #ecf0f1;
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 4px 12px;
+            border-radius: 16px;
         }
         
         .project {
             background: #f8f9fa;
-            margin: 15px 0;
-            padding: 20px;
-            border-radius: 10px;
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 8px;
             border-left: 4px solid #e74c3c;
         }
         
         .project-title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             color: #e74c3c;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .project-meta {
             display: flex;
-            gap: 20px;
-            margin-bottom: 10px;
-            font-size: 13px;
+            gap: 15px;
+            margin-bottom: 8px;
+            font-size: 12px;
             color: #7f8c8d;
         }
         
         .environment {
             background: white;
-            padding: 10px;
-            border-radius: 8px;
-            margin: 10px 0;
+            padding: 8px;
+            border-radius: 6px;
+            margin: 8px 0;
         }
         
         .environment-title {
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             color: #2c3e50;
         }
         
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 5px;
         }
         
         .tech-tag {
             background: #3498db;
             color: white;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 11px;
+            padding: 3px 6px;
+            border-radius: 10px;
+            font-size: 10px;
             font-weight: 500;
         }
         
         .responsibilities {
-            margin-top: 15px;
+            margin-top: 12px;
         }
         
         .responsibilities ul {
@@ -294,10 +322,10 @@
         }
         
         .responsibilities li {
-            padding: 8px 0;
-            padding-left: 20px;
+            padding: 6px 0;
+            padding-left: 16px;
             position: relative;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.5;
         }
         
@@ -306,22 +334,22 @@
             position: absolute;
             left: 0;
             color: #3498db;
-            font-size: 12px;
+            font-size: 10px;
         }
         
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
         
         .skill-card {
             background: white;
             border: 1px solid #e9ecef;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -333,40 +361,40 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, #3498db, #2980b9);
         }
         
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.15);
+            box-shadow: 0 12px 30px rgba(52, 152, 219, 0.15);
         }
         
         .skill-category {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
         
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
         
         .skill-tag {
             display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            white-space: nowrap;
+            gap: 5px;
             background: #f8f9fa;
             color: #2c3e50;
-            padding: 8px 12px;
-            border-radius: 20px;
-            font-size: 12px;
+            padding: 6px 10px;
+            border-radius: 16px;
+            font-size: 11px;
             font-weight: 500;
             border: 1px solid #e9ecef;
             transition: all 0.2s ease;
@@ -380,8 +408,8 @@
         }
         
         .skill-icon {
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             object-fit: contain;
         }
         
@@ -396,9 +424,9 @@
         }
         
         .aws-services {
-            font-size: 10px;
+            font-size: 9px;
             color: #7f8c8d;
-            margin-top: 8px;
+            margin-top: 6px;
             font-style: italic;
             line-height: 1.3;
         }
@@ -406,25 +434,98 @@
         /* Responsive */
         @media (max-width: 768px) {
             .resume-container {
-                grid-template-columns: 1fr;
-                margin: 10px;
+                grid-template-columns: 250px 1fr; /* Maintain two-column layout */
+                margin: 5px;
+                min-height: auto;
             }
             
             .sidebar {
-                order: 2;
+                padding: 15px 10px;
             }
             
             .main-content {
-                order: 1;
-                padding: 20px;
+                padding: 15px;
             }
             
-            .summary-grid {
-                grid-template-columns: 1fr;
+            .profile-image {
+                width: 100px;
+                height: 100px;
             }
             
-            .skills-grid {
-                grid-template-columns: 1fr;
+            .profile-image img {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .name {
+                font-size: 18px;
+            }
+            
+            .title {
+                font-size: 10px;
+            }
+            
+            .contact-section h3 {
+                font-size: 12px;
+            }
+            
+            .contact-item {
+                font-size: 10px;
+            }
+            
+            .achievements-section h3 {
+                font-size: 12px;
+            }
+            
+            .achievement-item {
+                font-size: 10px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+            }
+            
+            .job-title {
+                font-size: 16px;
+            }
+            
+            .company {
+                font-size: 12px;
+            }
+            
+            .duration {
+                font-size: 10px;
+                padding: 3px 10px;
+            }
+            
+            .project-title {
+                font-size: 12px;
+            }
+            
+            .project-meta {
+                font-size: 10px;
+            }
+            
+            .tech-tag {
+                font-size: 9px;
+                padding: 2px 5px;
+            }
+            
+            .responsibilities li {
+                font-size: 11px;
+            }
+            
+            .skill-category {
+                font-size: 12px;
+            }
+            
+            .skill-tag {
+                font-size: 10px;
+                padding: 5px 8px;
+            }
+            
+            .aws-services {
+                font-size: 8px;
             }
         }
     </style>
@@ -434,8 +535,11 @@
         <!-- Left Sidebar -->
         <aside class="sidebar">
             <div class="profile-section">
-                <div class="profile-image">SP</div>
-                <div class="name">SIVA PRASAD</div>
+                <div class="profile-image">
+                    <img src="https://raw.githubusercontent.com/siva_pra/main/WhatsApp Image 2025-04-21 at 4.41.52 PM.jpeg"
+                        alt="Profile Image">
+                </div>
+                <div class="name">Tellagorla Siva Prasad</div>
                 <div class="title">DevOps Engineer</div>
             </div>
             
@@ -443,7 +547,7 @@
                 <h3>Contact</h3>
                 <div class="contact-item">
                     <span class="contact-icon">📧</span>
-                    <a href="mailto:tellagorlasivaprasad1996@gmail.com" style="color: #bdc3c7; text-decoration: none;">tellagorlasivaprasad1996@gmail.com</a>
+                    <a href="mailto:tellagorlasivaprasad1996@gmail.com" title="Email Tellagorla Siva Prasad" style="color: #bdc3c7; text-decoration: none;">tellagorlasivaprasad1996@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <span class="contact-icon">📱</span>
@@ -451,16 +555,46 @@
                 </div>
                 <div class="contact-item">
                     <span class="contact-icon">📍</span>
-                    <span>Bangalore, India</span>
+                    <span>Vijayawada, India</span>
                 </div>
+            </div>
+            
+            <div class="achievements-section">
+                <h3>Achievements</h3>
+                <div class="achievement-item"><strong>Customised WSO2 API Manager</strong>: I successfully led the upgrade of the WSO2 API Manager, modernizing the system from CentOS to AlmaLinux with streamlined service installations. I implemented a robust save-deploy-publish API workflow, and enhanced security with flexible scope management. By automating AD-based RBAC through direct database updates and custom scripts, I improved efficiency, resolved multi-role login issues, and ensured data persistence with reliable backup/restore mechanisms, significantly boosting system stability and scalability.</div>
+                <div class="achievement-item"><strong>Kafka Data Pipeline Monitoring</strong>: I monitored and optimized a Kafka-based data pipeline, where Kafka efficiently published data from producers to consumers, with messages seamlessly stored in databases. Utilizing monitoring tools like Grafana and Prometheus, I analyzed performance metrics, ensured system reliability, and enhanced data flow efficiency, contributing to robust and scalable data processing workflows.</div>
+                <div class="achievement-item"><strong>etcd Backup and Restore</strong>: I successfully implemented and managed backup and restore operations for etcd snapshots in my K8s Cluster, ensuring data integrity and system resilience. By automating snapshot creation processes, I minimized downtime risks and maintained consistent cluster performance, enhancing overall system reliability.</div>
+                <div class="achievement-item"><strong>Zero Downtime Deployment Strategy</strong>: Designed and implemented a deployment strategy using DevOps practices to ensure 100% availability during updates, likely leveraging CI/CD pipelines and automated rollouts.</div>
+                <div class="achievement-item"><strong>Cost Reduction through Optimization</strong>: Engineered a cloud resource optimization framework, reducing costs by 60% while enhancing application performance, showcasing effective infrastructure as code (IaC) and resource management.</div>
             </div>
             
             <div class="education-section">
                 <h3>Education</h3>
                 <div class="education-item">
-                    <div class="education-degree">B.Tech in EEE</div>
+                    <div class="education-degree">B.Tech in ECE</div>
                     <div class="education-school">JNTUK, Kakinada</div>
-                    <div class="education-score">78% • 2019</div>
+                    <div class="education-score">78% • 2014</div>
+                </div>
+                <h3>Blogs</h3>
+                <div class="education-item">
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7363525800857362432-0UKG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Securing Nginx with Certificate Manager SSL and Passphrase in Docker</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7308377049805557760-s7Ry?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Deploying a Serverless Django Application Using Zappa</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7287765647592210432-GHRM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Kubeadm Reset and ETCD Backup & Restore Process in Kubernetes</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7273240920353857536-kTDM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Securing Your Cluster: How to Create View-Only Roles with Kubernetes RBAC</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7198246767547621376-N2Pt?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Set up a Jenkins job Integration with Gmail Notification</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7197148690610860033-veVQ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Jenkins Integration Hub with Slack.</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7169201454950408193-QoOq?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Setting up GitLab Runner on Kubernetes using MicroK8s and Guide to create GitLab CI templates</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7168849761339478018-SXys?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Automate Your CI/CD Pipeline with GitLab Runner(SSH) on Ubuntu</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7143127886588182528-_5tq?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Unlock the secrets of real-time data flow using Kafka and ClickHouse in a single-node setup</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7134781915508748289-UhR_?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Running ClickHouse on a single node without zookeeper in Kubernetes </a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7131645672222560257--mVE?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Running Kafka on a Single Node in K8s Cluster</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7112818661442166784-575E?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Deploying Jenkins agents by AWS-EC2 Spot instances</a></li>
+                        <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7109847771909656576--Jp1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEJtw8EBcJnmX-wnhnd9Tign70ZMBJC6Syc" target="_blank" style="color: #3498db; text-decoration: none;">Creating a Wildcard SSL Certificate using Let’s Encrypt for Nginx in Ubuntu 20.04, and Mapping to Domains.</a></li>
+                        <li><a href="https://www.linkedin.com/pulse/blog-post-14-shaik-nasseer" target="_blank" style="color: #3498db; text-decoration: none;">Blog Post 14</a></li>
+                        <li><a href="https://www.linkedin.com/pulse/blog-post-15-shaik-nasseer" target="_blank" style="color: #3498db; text-decoration: none;">Blog Post 15</a></li>
+                        <li><a href="https://www.linkedin.com/pulse/blog-post-16-shaik-nasseer" target="_blank" style="color: #3498db; text-decoration: none;">Blog Post 16</a></li>
+                    </ul>
                 </div>
             </div>
         </aside>
@@ -471,126 +605,245 @@
                 <h2 class="section-title">Professional Summary</h2>
                 <div class="summary-grid">
                     <div class="summary-item">
-                        <strong>4+ years</strong> of extensive experience in Software Development lifecycle as a DevOps Engineer, specializing in CI/CD, Configuration Management, and Cloud Services.
+                        Accomplished DevOps Engineer with over <strong>3 years</strong> of specialized experience in DevOps practices and <strong>3+ years</strong> in the IT industry. Expert in designing and implementing CI/CD pipelines, cloud infrastructure, container orchestration, and automation to optimize software development and deployment. Known for delivering scalable, reliable solutions using modern DevOps tools and cloud platforms.
                     </div>
                     <div class="summary-item">
-                        <strong>DevOps Expertise:</strong> Hands-on experience with Maven, Git, Jenkins, Ansible, Docker, Kubernetes for automated build and deployment processes.
+                        <strong>DevOps Expertise:</strong> Proficient in Git, GitHub Actions, GitLab Actions, Bitbucket, Jenkins, Ansible, Docker, On-premises Self-managed Kubernetes, Nginx, Kafka, WSO2, K9s, Postgres, Helm, Trivy, Qualys, and Grafana for automated build, deployment, and monitoring workflows.
                     </div>
                     <div class="summary-item">
-                        <strong>Cloud Proficiency:</strong> Strong experience with AWS services including EC2, EBS, S3, IAM, VPC, CloudWatch, Load Balancer, CloudFormation, and Auto Scaling.
+                        <strong>Cloud Proficiency:</strong> Extensive experience with AWS (EC2, ELB, S3, IAM, VPC, Route53, RDS, CloudWatch, Load Balancer, ECR, EKS, CloudFormation, Auto Scaling) and Azure, ensuring robust and scalable cloud environments.
                     </div>
                     <div class="summary-item">
-                        <strong>Containerization:</strong> Proficient in Docker containerization and Kubernetes orchestration, managing images via DockerHub Registry.
+                        <strong>Containerization & Orchestration:</strong> Skilled in Docker for containerization and Kubernetes for orchestration, managing images via Private Registry and AWS ECR for seamless deployments.
                     </div>
                     <div class="summary-item">
-                        <strong>Quality & Monitoring:</strong> Experienced in code quality analysis using SonarQube, monitoring with Nagios and CloudWatch.
+                        <strong>Monitoring & Quality:</strong> Experienced in ensuring code quality and system performance using Grafana, Loki, Prometheus, ELK Stack, and Kibana for comprehensive monitoring and analytics.
                     </div>
                     <div class="summary-item">
-                        <strong>Automation:</strong> Skilled in Python scripting for build automation and Linux command-line operations.
+                        <strong>Automation & Scripting:</strong> Proficient in Python and Shell scripting for build automation and advanced Linux command-line operations.
+                    </div>
+                    <div class="summary-item">
+                        <strong>Databases:</strong> Expertise in managing Postgres, MySQL, AWS RDS, and Redis databases for high-performance applications.
+                    </div>
+                    <div class="summary-item">
+                        <strong>Server Management:</strong> Skilled in VMware ESXi for virtualization and server optimization.
+                    </div>
+                    <div class="summary-item">
+                        <strong>Kubernetes Networking:</strong> Proficient in Flannel, Calico, and MetalLB for efficient Kubernetes networking and load balancing.
+                    </div>
+                    <div class="summary-item">
+                        <strong>Networking:</strong> Experienced with Cisco and Unifi routers for robust network configurations.
                     </div>
                 </div>
             </section>
-            
             <section class="section">
                 <h2 class="section-title">Professional Experience</h2>
-                
                 <div class="experience-item">
                     <div class="job-header">
                         <div>
                             <div class="job-title">DevOps Engineer & Build Release Engineer</div>
-                            <div class="company">Infosys, Bangalore</div>
+                            <div class="company">Buildbot Technologies Pvt Ltd, Vijayawada</div>
                         </div>
-                        <div class="duration">May 2019 – Present</div>
+                        <div class="duration">April 2023 – Present</div>
                     </div>
                     
                     <div class="project">
-                        <div class="project-title">🚗 Automobiles Project (Mercedes-Benz)</div>
+                        <div class="project-title">🌐 Connected Plant Solution (IoT)</div>
                         <div class="project-meta">
-                            <span><strong>Duration:</strong> May 2021 – Present</span>
-                            <span><strong>Team Size:</strong> 4 Members</span>
+                            <span><strong>Duration:</strong> April 2023 – Present</span>
+                            <span><strong>Team Size:</strong> 3 Members</span>
                         </div>
-                        
                         <div class="environment">
                             <div class="environment-title">Technology Environment:</div>
                             <div class="tech-stack">
-                                <span class="tech-tag">Maven</span>
-                                <span class="tech-tag">Git</span>
-                                <span class="tech-tag">Jira</span>
-                                <span class="tech-tag">Jenkins</span>
-                                <span class="tech-tag">AWS</span>
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Ansible</span>
-                                <span class="tech-tag">Kubernetes</span>
-                                <span class="tech-tag">Nexus</span>
-                                <span class="tech-tag">SonarQube</span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/git.svg" alt="" class="skill-icon">
+                                    Git
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/jira.svg" alt="" class="skill-icon">
+                                    Jira
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/amazonaws.svg" alt="" class="skill-icon">
+                                    ECR
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/amazonaws.svg" alt="" class="skill-icon">
+                                    AWS
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/jenkins.svg" alt="" class="skill-icon">
+                                    Jenkins
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/docker.svg" alt="" class="skill-icon">
+                                    Docker
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/ansible.svg" alt="" class="skill-icon">
+                                    Ansible
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/kubernetes.svg" alt="" class="skill-icon">
+                                    Kubernetes
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/helm.svg" alt="" class="skill-icon">
+                                    Helm
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/nginx.svg" alt="" class="skill-icon">
+                                    Nginx
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/kubernetes.svg" alt="" class="skill-icon">
+                                    Flannel
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/kubernetes.svg" alt="" class="skill-icon">
+                                    MetalLB
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/kubernetes.svg" alt="" class="skill-icon">
+                                    K9s
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/grafana.svg" alt="" class="skill-icon">
+                                    Grafana
+                                </span>
                             </div>
                         </div>
-                        
                         <div class="responsibilities">
-                            <h4 style="color: #2c3e50; margin-bottom: 10px;">Key Responsibilities:</h4>
+                            <h4 style="color: #2c3e50; margin-bottom: 10px;">Key Responsibilities & Achievements:</h4>
                             <ul>
-                                <li>Coordinated pre- and post-build activities, resolving build-related issues with development team</li>
-                                <li>Automated CI/CD pipelines using Jenkins, integrating with Git and Nexus repositories</li>
-                                <li>Deployed applications using Kubernetes and OpenShift, managing pods, services, and namespaces</li>
-                                <li>Created and managed Docker images, Dockerfiles, and Docker Hub registries</li>
-                                <li>Performed advanced Git operations (stash, squash, cherry-pick, bisect, revert, reset, rebase)</li>
-                                <li>Implemented Ansible for server configuration and automation, including roles and vault security</li>
-                                <li>Managed AWS EC2 instances, IAM, S3 policies, VPCs, and subnets</li>
-                                <li>Configured SonarQube with quality gates for static code analysis</li>
-                                <li>Maintained Kubernetes networking (Flannel, Weave Net, Calico) and ingress/load balancers</li>
+                                <li><strong>Orchestrated Kubernetes Clusters</strong>: Designed and managed self-hosted, on-premises Kubernetes clusters with three master nodes, writing custom Ansible scripts to automate deployment and configuration for high availability and scalability.</li>
+                                <li><strong>Developed CI/CD Pipelines</strong>: Built and optimized CI/CD pipelines using Bitbucket Pipelines, integrating with Git and Bitbucket repositories to enable seamless, automated software delivery and deployment.</li>
+                                <li><strong>Managed Containerized Applications</strong>: Deployed and maintained applications on Kubernetes, expertly handling pods, services, namespaces, and Helm charts to ensure efficient container orchestration.</li>
+                                <li><strong>Created Docker Artifacts</strong>: Authored Dockerfiles and managed Docker images, utilizing Private Docker Hub and AWS ECR registries for secure and scalable container storage.</li>
+                                <li><strong>Performed Advanced Git Operations</strong>: Executed complex Git workflows, including stash, cherry-pick, revert, reset, and rebase, to maintain clean and efficient version control processes.</li>
+                                <li><strong>Automated Infrastructure with Ansible</strong>: Implemented Ansible for server configuration, utilizing roles and Ansible Vault for secure automation of infrastructure provisioning and management.</li>
+                                <li><strong>Managed AWS Infrastructure</strong>: Administered AWS services, including EC2, IAM, S3, ECR, EKS, Route53, VPCs, subnets, RDS to build scalable, secure, and cost-effective cloud environments.</li>
+                                <li><strong>Enhanced Security</strong>: Configured Qualys for vulnerability scanning, ensuring robust security compliance across systems and applications.</li>
+                                <li><strong>Optimized Kubernetes Networking</strong>: Maintained Kubernetes networking with Flannel and implemented MetalLB as a load balancer to ensure efficient traffic management and high availability.</li>
+                                <li><strong>Implemented Monitoring Solutions</strong>: Designed and optimized monitoring and logging systems using the ELK Stack, Prometheus, and Grafana to ensure system reliability, performance, and proactive issue resolution.</li>
+                                <li><strong>Automated Processes</strong>: Leveraged Shell and Python scripting to automate build and operational workflows, streamlining repetitive tasks and enhancing efficiency.</li>
+                                <li><strong>Collaborated Cross-Functionally</strong>: Partnered with development and operations teams to align DevOps practices, improve security posture, and maintain comprehensive documentation for all processes.</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="project">
-                        <div class="project-title">🌐 Internet of Things (IoT) Project (Verizon)</div>
+                        <div class="project-title">🌐 SEA.O.G </div>
                         <div class="project-meta">
-                            <span><strong>Duration:</strong> May 2019 – May 2021</span>
+                            <span><strong>Duration:</strong> August 2024 – Present</span>
                             <span><strong>Team Size:</strong> 3 Members</span>
+                        </div>
+                        <div class="environment">
+                            <div class="environment-title">Technology Environment:</div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/git.svg" alt="" class="skill-icon">
+                                    Git
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/githubactions.svg" alt="" class="skill-icon">
+                                    Git Hub Actions
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/amazonaws.svg" alt="" class="skill-icon">
+                                    ECR
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/amazonaws.svg" alt="" class="skill-icon">
+                                    AWS
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/docker.svg" alt="" class="skill-icon">
+                                    Docker
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/amazoneks.svg" alt="" class="skill-icon">
+                                    EKS
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/helm.svg" alt="" class="skill-icon">
+                                    Helm
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/nginx.svg" alt="" class="skill-icon">
+                                    Nginx
+                                </span>
+                            </div>
+                        </div>
+                        <div class="responsibilities">
+                            <h4 style="color: #2c3e50; margin-bottom: 10px;">Key Responsibilities & Achievements:</h4>
+                            <ul>
+                                <li><strong>Orchestrated AWS EKS Clusters</strong>: Designed and managed AWS Elastic Kubernetes Service (EKS) clusters, using Helm charts to deploy and configure containerized applications for high availability and scalability.</li>
+                                <li><strong>Developed CI/CD Pipelines</strong>: Built and optimized CI/CD pipelines using GitHub Actions, integrating with Git repositories to automate code builds, testing, and deployments to AWS EKS.</li>
+                                <li><strong>Managed Containerized Applications</strong>: Deployed and maintained applications on AWS EKS, leveraging Docker for containerization and Nginx for load balancing to ensure reliable and scalable service delivery.</li>
+                                <li><strong>Created Docker Artifacts</strong>: Authored Dockerfiles and managed container images in AWS Elastic Container Registry (ECR), ensuring secure and efficient storage and deployment of application artifacts.</li>
+                                <li><strong>Performed Advanced Git Operations</strong>: Executed complex Git workflows (e.g., branching, merging, rebasing) to maintain robust version control, integrated with GitHub Actions for seamless automation.</li>
+                                <li><strong>Optimized AWS Infrastructure</strong>: Administered AWS services, including EKS, ECR, and related cloud resources, to build secure, scalable, and cost-effective environments for the SEA.O.G project.</li>
+                                <li><strong>Enhanced System Performance</strong>: Configured Nginx as a reverse proxy and load balancer to optimize traffic management and ensure high availability for EKS-hosted applications.</li>
+                                <li><strong>Streamlined Deployment Processes</strong>: Automated infrastructure provisioning and application deployments using GitHub Actions and Helm, reducing manual effort and improving release efficiency.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-title">🦅 Airfield Operations & Inspection Management Software (AIROps™ by Eagle Aerospace)</div>
+                        <div class="project-meta">
+                            <span><strong>Duration:</strong> June 2023 – May 2025</span>
+                            <span><strong>Team Size:</strong> 2 Members</span>
                         </div>
                         
                         <div class="environment">
                             <div class="environment-title">Technology Environment:</div>
                             <div class="tech-stack">
                                 <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/apachemaven.svg" alt="Maven" class="tech-tag-icon">
-                                    Maven
-                                </span>
-                                <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/git.svg" alt="Git" class="tech-tag-icon">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/git.svg" alt="" class="skill-icon">
                                     Git
                                 </span>
                                 <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/jira.svg" alt="Jira" class="tech-tag-icon">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/jira.svg" alt="" class="skill-icon">
                                     Jira
                                 </span>
                                 <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/package.svg" alt="Nexus" class="tech-tag-icon">
-                                    Nexus
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/microsoftazure.svg" alt="" class="skill-icon">
+                                    AZURE
                                 </span>
                                 <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/amazonaws.svg" alt="AWS" class="tech-tag-icon">
-                                    AWS
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/azuredevops.svg" alt="" class="skill-icon">
+                                    Azure DevOps
                                 </span>
                                 <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/jenkins.svg" alt="Jenkins" class="tech-tag-icon">
-                                    Jenkins
-                                </span>
-                                <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/docker.svg" alt="Docker" class="tech-tag-icon">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/docker.svg" alt="" class="skill-icon">
                                     Docker
                                 </span>
                                 <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/ansible.svg" alt="Ansible" class="tech-tag-icon">
-                                    Ansible
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/microsoftazure.svg" alt="" class="skill-icon">
+                                    AKS
                                 </span>
                                 <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/apachetomcat.svg" alt="Tomcat7" class="tech-tag-icon">
-                                    Tomcat7
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/helm.svg" alt="" class="skill-icon">
+                                    Helm
                                 </span>
                                 <span class="tech-tag">
-                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/openjdk.svg" alt="Core Java" class="tech-tag-icon">
-                                    Core Java
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/nginx.svg" alt="" class="skill-icon">
+                                    Nginx
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/kubernetes.svg" alt="" class="skill-icon">
+                                    Lens
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/grafana.svg" alt="" class="skill-icon">
+                                    Grafana
+                                </span>
+                                <span class="tech-tag">
+                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/prometheus.svg" alt="" class="skill-icon">
+                                    Prometheus
                                 </span>
                             </div>
                         </div>
@@ -598,18 +851,21 @@
                         <div class="responsibilities">
                             <h4 style="color: #2c3e50; margin-bottom: 10px;">Key Responsibilities:</h4>
                             <ul>
-                                <li>Managed daily build and deployment activities, ensuring smooth operations for end-users</li>
-                                <li>Configured Jenkins for CI/CD automation and integrated with Git repositories</li>
-                                <li>Deployed applications on Apache Tomcat and managed server configurations</li>
-                                <li>Launched AWS EC2 instances and S3 buckets using Python scripts (Boto, OS, Sys, Subprocess)</li>
-                                <li>Created and maintained documentation for resolved issues as knowledge base</li>
-                                <li>Performed post-deployment validation, including JUnit tests, and supported testing teams</li>
-                                <li>Implemented Ansible for server configuration and automation</li>
+                                <li><strong>Orchestrated AKS Clusters</strong>: Designed and managed Azure Kubernetes Service (AKS) clusters, leveraging Helm charts and Lens for efficient deployment, configuration, and monitoring of containerized applications.</li>
+                                <li><strong>Developed CI/CD Pipelines</strong>: Built and optimized CI/CD pipelines using Azure DevOps and Azure Pipelines, integrating with Git repositories and Jira for streamlined code delivery and deployment automation.</li>
+                                <li><strong>Managed Containerized Applications</strong>: Deployed and maintained applications on AKS, utilizing Docker for containerization and Nginx as a reverse proxy to ensure scalable and reliable service delivery.</li>
+                                <li><strong>Created Docker Artifacts</strong>: Authored Dockerfiles and managed container images in Azure Container Registry, enabling secure and efficient storage and deployment of application artifacts.</li>
+                                <li><strong>Performed Advanced Git Operations</strong>: Executed complex Git workflows (e.g., branching, merging, rebasing) to maintain robust version control, integrated with Azure DevOps for seamless collaboration.</li>
+                                <li><strong>Implemented Monitoring Solutions</strong>: Designed and deployed monitoring systems using Prometheus and Grafana, configuring dashboards and alerts to ensure real-time performance tracking and proactive issue resolution for infrastructure.</li>
+                                <li><strong>Managed Azure Infrastructure</strong>: Administered Azure services, including Virtual Machines, Blob Storage, Virtual Networks, and AKS, to build secure, scalable, and cost-optimized cloud environments.</li>
+                                <li><strong>Enhanced System Reliability</strong>: Configured Nginx for load balancing and high availability, optimizing traffic management for AKS-hosted applications.</li>
+                                <li><strong>Automated Deployment Processes</strong>: Leveraged Azure DevOps for automated infrastructure provisioning and application deployments, reducing manual effort and improving release cycles.</li>
+                                <li><strong>Collaborated Cross-Functionally</strong>: Partnered with development and operations teams via Jira to align DevOps practices, enhance system performance, and maintain comprehensive documentation for all processes.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </section>
+
             
             <section class="section">
                 <h2 class="section-title">Technical Skills</h2>
@@ -618,12 +874,12 @@
                         <h3 class="skill-category">🔧 Version Control</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/git.svg" alt="Git" class="skill-icon">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/git.svg" alt="" class="skill-icon">
                                 Git
                             </span>
                             <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/subversion.svg" alt="SVN" class="skill-icon">
-                                SVN
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/bitbucket.svg" alt="" class="skill-icon">
+                                Bitbucket
                             </span>
                         </div>
                     </div>
@@ -632,22 +888,22 @@
                         <h3 class="skill-category">⚡ Orchestration</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/kubernetes.svg" alt="Kubernetes" class="skill-icon">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/kubernetes.svg" alt="" class="skill-icon">
                                 Kubernetes
-                            </span>
-                            <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/redhatopenshift.svg" alt="OpenShift" class="skill-icon">
-                                OpenShift
                             </span>
                         </div>
                     </div>
 
                     <div class="skill-card">
-                        <h3 class="skill-category">📦 Containerization</h3>
+                        <h3 class="skill-category">💻 Operating Systems</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/docker.svg" alt="Docker" class="skill-icon">
-                                Docker
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/ubuntu.svg" alt="" class="skill-icon">
+                                Ubuntu
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/redhat.svg" alt="" class="skill-icon">
+                                Redhat
                             </span>
                         </div>
                     </div>
@@ -656,20 +912,15 @@
                         <h3 class="skill-category">☁️ Cloud Platforms</h3>
                         <div class="skill-tags">
                             <span class="skill-tag aws-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/amazonaws.svg" alt="AWS" class="skill-icon">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/amazonaws.svg" alt="" class="skill-icon">
                                 AWS
                             </span>
-                            <div class="aws-services">EC2 • EBS • S3 • IAM • VPC • CloudWatch • Load Balancer • CloudFormation • Auto Scaling</div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3 class="skill-category">🔍 Code Quality</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/sonarqube.svg" alt="SonarQube" class="skill-icon">
-                                SonarQube
+                            <div class="aws-services">EC2 • EKS • S3 • IAM • VPC • Load Balancer • Auto Scaling • Route53 • RDS • ECR</div>
+                            <span class="skill-tag aws-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/microsoftazure.svg" alt="" class="skill-icon">
+                                Azure
                             </span>
+                            <div class="aws-services">Virtual Machines • AKS • Blob Storage • Microsoft Entra ID • Virtual Network • Load Balancer • Azure Auto Scale • Azure Database • ACR</div>
                         </div>
                     </div>
 
@@ -677,8 +928,56 @@
                         <h3 class="skill-category">🚀 CI/CD</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/jenkins.svg" alt="Jenkins" class="skill-icon">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/jenkins.svg" alt="" class="skill-icon">
                                 Jenkins
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/githubactions.svg" alt="" class="skill-icon">
+                                GitHub Actions
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/bitbucket.svg" alt="" class="skill-icon">
+                                Bitbucket Pipelines
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/azurepipelines.svg" alt="" class="skill-icon">
+                                Azure Pipelines
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/gitlab.svg" alt="" class="skill-icon">
+                                GitLab Runners
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-category">🔒 Certificates</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/openssl.svg" alt="" class="skill-icon">
+                                OpenSSL
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/lock.svg" alt="" class="skill-icon">
+                                ZeroSSL
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/lock.svg" alt="" class="skill-icon">
+                                AWS ACM
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/lock.svg" alt="" class="skill-icon">
+                                Certbot
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-category">📦 Containerization</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/docker.svg" alt="" class="skill-icon">
+                                Docker
                             </span>
                         </div>
                     </div>
@@ -687,32 +986,22 @@
                         <h3 class="skill-category">⚙️ Configuration</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/ansible.svg" alt="Ansible" class="skill-icon">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/ansible.svg" alt="" class="skill-icon">
                                 Ansible
                             </span>
                         </div>
                     </div>
 
                     <div class="skill-card">
-                        <h3 class="skill-category">🐍 Programming</h3>
+                        <h3 class="skill-category">🐍 Programming + Scripting</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/python.svg" alt="Python" class="skill-icon">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/python.svg" alt="" class="skill-icon">
                                 Python
                             </span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3 class="skill-category">🔨 Build Tools</h3>
-                        <div class="skill-tags">
                             <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/apacheant.svg" alt="Ant" class="skill-icon">
-                                Ant
-                            </span>
-                            <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/apachemaven.svg" alt="Maven" class="skill-icon">
-                                Maven
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/gnubash.svg" alt="" class="skill-icon">
+                                Shell Scripting
                             </span>
                         </div>
                     </div>
@@ -721,8 +1010,52 @@
                         <h3 class="skill-category">📊 Monitoring</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/nagios.svg" alt="Nagios" class="skill-icon">
-                                Nagios
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/grafana.svg" alt="" class="skill-icon">
+                                Grafana
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-category">📨 Message Broker</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/apachekafka.svg" alt="" class="skill-icon">
+                                Kafka
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-category">🌐 Data Streaming Platform</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/message.svg" alt="" class="skill-icon">
+                                HiveMQ
+                            </span>
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/message.svg" alt="" class="skill-icon">
+                                VerneMQ
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-category">🔌 API Manager</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/api.svg" alt="" class="skill-icon">
+                                WSO2
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3 class="skill-category">🏗️ Infrastructure as Code</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.0.0/terraform.svg" alt="" class="skill-icon">
+                                Terraform
                             </span>
                         </div>
                     </div>
